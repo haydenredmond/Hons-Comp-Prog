@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+
+public class gameInput {
+
+	public static void main(String [] args)
+	{		
+		Scanner sc1 = new Scanner(System.in);										
+		String userName;
+		
+		System.out.println("Create a Username: ");									
+		
+		userName = sc1.nextLine();		
+		System.out.println("Welcome " + userName + " to Scanner Offline!");			
+		
+		
+		Scanner sc2 = new Scanner(System.in);										
+		String firstResponse;
+		
+		System.out.println("You begin your journey at a fork in the road...");		
+		System.out.println("Press 1 to turn left...");
+		System.out.println("Press 2 to turn right...");		
+		
+		Scanner sc3 = new Scanner(System.in);										
+		String secondResponse = sc3.next();
+		
+		gameLogic secondDecision = new gameLogic(secondResponse, secondResponse);	
+		
+		System.out.println(secondDecision.firstQue());								
+		System.out.println(secondDecision.firstQueData());							
+		
+		secondResponse = sc3.nextLine();											
+		
+		
+		Scanner sc4 = new Scanner(System.in);
+		String thirdResponse = sc4.next();
+		
+		gameLogic thrirdDecision = new gameLogic(thirdResponse, thirdResponse);
+		
+		System.out.println(thirdResponse);
+		
+		
+		
+		sc1.close();
+		sc2.close();
+		sc3.close();
+		sc4.close();
+		
+	}
+	
+	
+}
