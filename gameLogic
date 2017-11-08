@@ -1,0 +1,44 @@
+public class gameLogic {
+
+	public gameLogic(String aResponse, String secondResponse)
+	{
+		ans = aResponse;
+		ans2 = secondResponse;
+	}
+
+		public String firstQue()
+		{
+			if (ans.equals("1"))
+			{		
+				ans = "You arrive at a Castle! \nYou see two entrances!";
+			}
+			else
+			{	
+				ans = "You arrive at a tavern! \nYou see two entrances!";
+			}
+			
+			return ans;
+			
+		}
+		
+		public String firstQueData()
+		{
+			if (ans.equals("1"))
+			{
+				ans2  = "Press 1 to enter Main gate \nPress 2 to enter Side Gate";
+			}
+			
+			else 
+			{
+				ans2 = "Press 1 to enter Manager's Door \nPress 2 to enter Main Door";
+			}
+			
+			return ans2;
+		}
+		
+		
+	private String ans;
+	private String ans2;
+	private String ans3;
+
+}
